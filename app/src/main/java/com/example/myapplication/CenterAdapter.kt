@@ -22,6 +22,10 @@ class CenterAdapter(private val centers: List<Center>) :
         val temp2TextView: TextView = itemView.findViewById(R.id.temp2TextView)
         val temp2ValueTextView: TextView = itemView.findViewById(R.id.temp2ValueTextView)
 
+        val temp3TextView: TextView = itemView.findViewById(R.id.temp3TextView)
+        val temp3ValueTextView: TextView = itemView.findViewById(R.id.temp3ValueTextView)
+
+
         val humidityTextView: TextView = itemView.findViewById(R.id.humidityTextView)
         val humidityValueTextView: TextView = itemView.findViewById(R.id.humidityValueTextView)
     }
@@ -34,17 +38,24 @@ class CenterAdapter(private val centers: List<Center>) :
 
     override fun onBindViewHolder(holder: CenterViewHolder, position: Int) {
         val center = centers[position]
-        Log.d("RecyclerViewCheck", "Binding Center: ${center.centerNumber}")
-        holder.titleTextView.text = "مرکز شماره ${center.centerNumber}"
 
-        holder.temp1TextView.text = "دمای 1:"
-        holder.temp1ValueTextView.text = "${center.temperature1}"
+        holder.titleTextView.text = center.CenterName
 
-        holder.temp2TextView.text = "دمای 2:"
-        holder.temp2ValueTextView.text = "${center.temperature2}"
+        val sensor1=center.Sensors[0]
+        holder.temp1TextView.text = sensor1.Name
+        holder.temp1ValueTextView.text = sensor1.Value.toString()
 
-        holder.humidityTextView.text = "رطوبت: "
-        holder.humidityValueTextView.text = "${center.humidity}"
+        val sensor2=center.Sensors[1]
+        holder.temp2TextView.text = sensor2.Name
+        holder.temp2ValueTextView.text = sensor2.Value.toString()
+
+        val sensor3=center.Sensors[2]
+        holder.temp3TextView.text = sensor3.Name
+        holder.temp3ValueTextView.text = sensor3.Value.toString()
+
+        val sensor4=center.Sensors[3]
+        holder.humidityTextView.text = sensor4.Name
+        holder.humidityValueTextView.text = sensor4.Value.toString()
 
     }
 

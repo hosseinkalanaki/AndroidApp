@@ -32,24 +32,26 @@
             android:layout_height="wrap_content"
             android:background="@drawable/sensorboxtop"
             android:layoutDirection="rtl"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:padding="16dp"
             app:cardCornerRadius="30dp">
 
             <TextView
                 android:id="@+id/temp1TextView"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="start"
-                android:text=":دمای 1"
+                android:text=":دمای  اول سالن"
                 android:textColor="#39D88F"
                 android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/temp1ValueTextView"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="left"
                 android:layout_weight="1"
                 android:gravity="end"
                 android:text="25.2"
@@ -62,23 +64,25 @@
             android:layout_height="wrap_content"
             android:background="@drawable/sensorboxmiddle"
             android:layoutDirection="rtl"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:padding="16dp">
 
             <TextView
                 android:id="@+id/temp2TextView"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="start"
-                android:text=":دمای 2"
+                android:text="دمای  آخر سالن"
                 android:textColor="#39D88F"
                 android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/temp2ValueTextView"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="left"
                 android:layout_weight="1"
                 android:gravity="end"
                 android:text="25.2"
@@ -89,25 +93,60 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/sensorboxmiddle"
+            android:layoutDirection="rtl"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/temp3TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="دمای داخل رک"
+                android:textColor="#39D88F"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/temp3ValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="25.2"
+                android:textColor="#39D88F"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:background="@drawable/sensorboxbottom"
             android:layoutDirection="rtl"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:padding="16dp">
 
             <TextView
                 android:id="@+id/humidityTextView"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="start"
-                android:text="رطوبت کل مرکز:"
+                android:text="رطوبت سالن"
                 android:textColor="#598CEC"
                 android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/humidityValueTextView"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="left"
                 android:layout_weight="1"
                 android:gravity="end"
                 android:text="50"

@@ -1,6 +1,7 @@
 data class Center(
-    val centerNumber: Int,
-    val temperature1: Double,
-    val temperature2: Double,
-    val humidity: Int
+    val Id: String,
+    val CenterName: String,
+    val IpAddress: String,
+    val Port: String,
+    val Sensors: List<Sensor>
 )
